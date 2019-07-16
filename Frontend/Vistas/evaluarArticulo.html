@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../Estilos/Css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Estilos/Css/fontawesome.min.css">
+    <link rel="stylesheet" href="../Estilos/Css/estilos.css">
+    <script src="../Scripts/scriptArticulo.js" language="javascript1.5"></script>
+    <script src="../Scripts/scriptAsignacion.js" languaje="javascript1.5"></script>
+    <script src="../Scripts/scriptEvaluacion.js" languaje="javascript1.5"></script>
+    <script src="../includes/jquery.js" language="javascript1.5"></script>
+    <title>EnviarArticulo</title>
+</head>
+
+<body onload="consultarNombre();mostrarVariables()">
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <!--navegacion-->
+                    <span class="sr-only">Este botón despliega la barra de navegacion</span>
+                    <!--para las herramientas que leen la página-->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="inicioPar.html">Revista UAM</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="inicioPar.html"><i class=""></i> Inicio</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="listaArticulosPar.html"><i class=""></i> Evaluar artículo</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="" id="nombreUsu"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                    </li>
+                    <li><a href="index.html"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                            cerrarSesion</a> </li>
+                </ul>
+
+                <ul class="nav navbar-nav ">
+                    <li>
+                        <a href="notificacionesPar.html">Notificaciones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">Evalua el artículo</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <h3 class="panel-title">Información Artículo</h3>
+                    </div>
+                    <div class="panel-body" id="datosArticulo">
+
+                    </div>
+                </div>
+
+                <input type="hidden" id="articuloId">
+            </div>
+
+            <div class="col-md-6 text-center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Introduce los datos requeridos
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" method="post" action="">
+                            <label>Calificación*</label>
+                            <input type="text" class="form-control" name="titu" id="titulo" placeholder="debe ser de 0 a 5">
+
+                            <label>Comentarios</label>
+                            <textarea name="res" id="resumen" class="form-control" rows="5"></textarea>
+                            <br>
+                            <button type="reset" class="btn btn-default btn-primary limpiar ">Limpiar campos</button>
+                            <br>
+                            <br>
+                            <input type="button" class="btn btn-default btn-primary limpiar" value="Enviar evaluación"
+                                onclick="insertarEvaluacion()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/main.js"></script>
+
+</body>
+
+</html>

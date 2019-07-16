@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../Estilos/Css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Estilos/Css/fontawesome.min.css">
+    <link rel="stylesheet" href="../Estilos/Css/estilos.css">
+    <script src="../Scripts/script.js" language="javascript1.5"></script>
+    <script src="../Scripts/scriptArticulo.js" language="javascript1.5"></script>
+    <script src="../includes/jquery.js" language="javascript1.5"></script>
+    <title>Inicio</title>
+</head>
+
+<body onload="consultarNombre();consultaPublicaciones(1)">
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <!--navegacion-->
+                    <span class="sr-only">Este botón despliega la barra de navegacion</span>
+                    <!--para las herramientas que leen la página-->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="inicioEditor.html">Revista UAM</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="inicioEditor.html"><i class=""></i> Inicio</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="articulo.html"><i class=""></i> Artículos</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="autor.html"><i class=""></i> Autores</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="par.html"><i class=""></i> Pares</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ">
+                    <li>
+                        <a href="notificacionesEditor.html">Notificaciones</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="" id="nombreUsu"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> </a>
+                    </li>
+                    <li><a href="index.html" onclick="cerrar()"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                            Cerrar Sesion</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">Revista UAM</h1>
+            <p class="text-center">Aquí encontrarás diferentes e interesantes articulos, que podrás descargar o leer.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                <!--Icono de lupa-->
+                                Búsqueda
+                            </div>
+                            <div class="panel-body">
+                                <form role="form-control" method="post" action="">
+                                    <div class="form-group">
+                                        <input type="search" name="termino-buscar" id="busqueda" class="form-control"
+                                            placeholder="¿Qué buscas?">
+                                    </div>
+                                    <button type="button" name="buscar" class="form-control btn btn-primary " onclick="buscarArticulo('lector')">
+                                        Buscar
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <iframe src="https://chatwing.com/chatbox/366bb110-f7ec-11e8-956e-0997800a68cf" width="100%"
+                            height="500" frameborder="0" scrolling="0"></iframe>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="col-md-12">
+                    <div class="row" id="cajota">
+                        <div id="caja">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/bootstrap.min.js"></script>
+</body>
+
+</html>

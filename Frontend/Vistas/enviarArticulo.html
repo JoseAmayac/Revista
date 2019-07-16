@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../Estilos/Css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Estilos/Css/fontawesome.min.css">
+    <link rel="stylesheet" href="../Estilos/Css/estilos.css">
+    <script src="../Scripts/scriptArticulo.js" language="javascript1.5"></script>
+    <script src="../Scripts/script.js" language="javascript1.5"></script>
+    <script src="../includes/jquery.js" language="javascript1.5"></script>
+    <title>EnviarArticulo</title>
+</head>
+
+<body onload="consultarNombre()">
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <!--navegacion-->
+                    <span class="sr-only">Este botón despliega la barra de navegacion</span>
+                    <!--para las herramientas que leen la página-->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="inicioLogIn.html">Revista UAM</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="inicioLogIn.html"><i class=""></i> Inicio</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="enviarArticulo.html"><i class=""></i> Enviar artículo</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="" id="nombreUsu"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
+                    </li>
+                    <li><a href="index.html" onclick="cerrara()"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                            cerrarSesion</a> </li>
+                </ul>
+
+                <ul class="nav navbar-nav ">
+                    <li>
+                        <a href="notificaciones.html">Notificaciones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">Envía tu artículo</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Artículo</h3>
+                    </div>
+                    <div class="panel-body">
+                        <br>
+                        <div class="panel-body">
+                            <form role="form" method="post" id="subirArchivo" action="">
+                                <div class="form-group">
+                                    <input type="search" id="entrada" name="ruta" class="form-control" placeholder="Nombre artículo (.doc,.docx,.pdf, .pptx)"
+                                        readonly>
+                                </div>
+                                <label for="nuestroInput" id="nuevoBoton" class="btn btn-default btn-primary limpiar glyphicon glyphicon-open">
+                                    <span>Seleccionar</span></label>
+                                <span>
+                                    <input type="file" accept=".doc,.docx,.pdf,.pptx" class="" name="buscar" id="nuestroInput"
+                                        onchange="obtenerRuta()" value="Seleccionar">
+                                </span>
+                            </form>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Introduce los datos del artículo
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" method="post" action="">
+                            <label>Titulo del artículo*</label>
+                            <input type="text" class="form-control" name="titu" id="titulo" placeholder="Ej:La paz mundial">
+
+                            <label for="text">Temas del artículo*</label>
+                            <input type="text" class="form-control" name="tema" id="tema" placeholder="Ej:comida,ocio,musica">
+
+                            <label>Palabras clave*</label>
+                            <input type="text" class="form-control" name="clave" id="palabraClave" placeholder="hamburguesa">
+
+                            <label>Resumen*</label>
+                            <textarea name="res" id="resumen" class="form-control" rows="5"></textarea>
+                            <br>
+                            <button type="reset" class="btn btn-default btn-primary limpiar ">Limpiar campos</button>
+                            <br>
+                            <br>
+                            <input type="button" class="btn btn-default btn-primary limpiar" value="Enviar artículo"
+                                onclick="validarArticulo()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/main.js"></script>
+
+</body>
+
+</html>

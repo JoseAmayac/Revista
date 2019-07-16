@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../Estilos/Css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Estilos/Css/fontawesome.min.css">
+    <link rel="stylesheet" href="../Estilos/Css/estilos.css">
+    <script src="../Scripts/script.js" language="javascript1.5"></script>
+    <script src="../Scripts/scriptArticulo.js" language="javascript1.5"></script>
+    <script src="../includes/jquery.js" language="javascript1.5"></script>
+    <title>Inicio</title>
+</head>
+
+<body onload="consultaPublicaciones(0)">
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <!--navegacion-->
+                    <span class="sr-only">Este botón despliega la barra de navegacion</span>
+                    <!--para las herramientas que leen la página-->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a title="Página principal" class="navbar-brand" href="index.html">Revista UAM</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a title="Página principal" href="index.html"><i class=""></i> Inicio</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a title="Entra para poder subir artículos" href="login.html"><span class="glyphicon glyphicon-log-in"
+                                aria-hidden="true"></span> Iniciar sesión</a>
+                    </li>
+                    <li><a title="Registrate en nuestra página" href="registro.html"><span class="glyphicon glyphicon-plus"
+                                aria-hidden="true"></span> Registro</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">Revista UAM</h1>
+            <p class="text-center">Aquí encontrarás diferentes e interesantes articulos, que podrás descargar o leer.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                <!--Icono de lupa-->
+                                Búsqueda
+                            </div>
+                            <div class="panel-body">
+                                <form role="form-control" method="post" action="">
+                                    <div class="form-group">
+                                        <input type="search" name="termino-buscar" id="busqueda" class="form-control" placeholder="¿Qué buscas?">
+                                    </div>
+                                    <button type="button" name="buscar" class="form-control btn btn-primary" onclick="buscarArticulo()">
+                                        Buscar
+                                    </button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div id="caja">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../Scripts/bootstrap.min.js"></script>
+</body>
+
+</html>

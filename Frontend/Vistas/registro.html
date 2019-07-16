@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../Estilos/Css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Estilos/Css/fontawesome.min.css">
+    <link rel="stylesheet" href="../Estilos/Css/estilos.css">
+    <script src="../Scripts/script.js" language="javascript1.5"></script>
+    <script src="../includes/jquery.js" language="javascript1.5"></script>
+    <title>Registro</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <!--navegacion-->
+                    <span class="sr-only">Este botón despliega la barra de navegacion</span>
+                    <!--para las herramientas que leen la página-->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Revista UAM</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html"><i class=""></i> Inicio</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="login.html"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Iniciar sesión</a>
+                    </li>
+                    <li><a href="registro.html"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Registro</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">Formulario de Registro</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Instrucciones</h3>
+                    </div>
+                    <div class="panel-body">
+                        <br>
+                        <p class="text-justify">
+                            Para poder enviar tus articulos debes estar registrado,
+                            Introduce todos los datos requeridos (marcados con *) para el registro correcto.
+                        </p>
+                        <br>
+                        <br>
+                        <a href="login.html">¿Ya tienes cuenta?</a>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Introduce tus datos
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" method="post" action="">
+                            <label>Nombre completo*</label>
+                            <input type="text" class="form-control" name="nom" id="nombre" placeholder="pepito perez" >
+
+                            <label for="email">Email*</label>
+                            <input type="email" class="form-control" name="corr" id="correo" placeholder="pepito"> <label id="sugerencia" >@autonoma.edu.co</label>
+
+                            <label>Direccion*</label>
+                            <input type="text" class="form-control" name="dir" id="direccion" placeholder="calle perro" >
+
+                            <label>Telefono*</label>
+                            <input type="text" class="form-control" name="tel" id="telefono" placeholder="0000000" >
+
+                            <label>Afiliación</label>
+                            <input type="text" class="form-control" id="afiliacion" name="afil" placeholder="ingenieria" >
+
+                            <label>Contraseña*</label>
+                            <input type="password" class="form-control" id="pass" name="pass"  placeholder="" >
+
+                            <br>
+                            <button type="reset" class="btn btn-default btn-primary limpiar ">Limpiar campos</button>
+                            <br>
+                            <br>
+                            <input type="button" class="btn btn-default btn-primary limpiar" value="Registrarse" onclick="verificarCampos()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="../Scripts/bootstrap.min.js"></script>
+</body>
+
+</html>

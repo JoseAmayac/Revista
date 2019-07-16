@@ -1,0 +1,145 @@
+body{
+    background-image: url(../../imagenes/sativa.png);
+}
+
+.jumbotron{
+    background-color: deepskyblue;
+    color: white;
+}
+
+.panel-heading{
+    background-color: deepskyblue !important;
+    color: white !important;
+}
+
+.panel-body{
+    color: #2b2b2b !important;
+}
+
+.navbar-brand:link, .navbar-brand:visited{
+    color: deepskyblue !important;
+}
+
+.navbar-brand:hover, .navbar-brand:active{
+    color:white !important;
+}
+
+.navbar{
+    background-color: #2b2b2b;
+}
+
+#navbar li a:link, #navbar li a:visited{
+    color: white;
+}
+
+#navbar li a:hover, #navbar li a:active{
+    color: deepskyblue !important;
+}
+
+.dropdown-menu{
+    background-color: #2b2b2b;
+}
+
+.open > a{
+    background-color: #2b2b2b !important;
+}
+
+.btn-primary{
+    background-color: deepskyblue !important;
+    border: none;
+
+    
+    
+}
+.btn-danger
+{
+    background-color: rgb(247, 33, 33);
+}
+.btnSeparador
+{
+    margin: 1% !important;
+}
+
+
+.btn-danger:hover{
+    background-color: red !important;
+}
+
+
+.btn-primary:hover{
+    background-color: #2b2b2b !important;
+}
+
+.limpiar:hover{
+    background-color: #2b2b2b !important;
+}
+.dropdown-menu {
+    background-color: #2b2b2b;
+}
+#nuestroInput {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+#nuevoBoton {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: deepskyblue;
+    display: inline-block;
+   
+    cursor: pointer;
+    padding: 15px 40px !important;
+    width: fit-content;
+    text-align: center;
+}
+
+#correo{
+    width: 60% !important;
+}
+#email
+{
+    width: 60% !important;
+}
+#sugerencia{
+    background-color: deepskyblue;
+    color: white;
+    padding-top: 1.5%;
+    padding-bottom: 0.8%;
+    border-radius: 5px;
+    position: absolute;
+    top: 25.3%;
+    right: 5%;
+    width: 36.2%;
+}
+#sugerencia1{
+    background-color: deepskyblue;
+    color: white;
+    padding-top: 1.5%;
+    padding-bottom: 0.8%;
+    border-radius: 5px;
+    position: absolute;
+    top: 36.5%;
+    right: 5%;
+    width: 36.2%;
+}
+.error{
+    box-shadow: red 0 0 2px 2px;
+    box-shadow: inset red 0 0 20px ;
+}
+
+#letra{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#colorLetra{
+    color: white !important;
+}
+
+.btn-success
+{
+    background-color: rgb(29, 173, 29) !important;
+}
